@@ -1,0 +1,33 @@
+# What is the meaning of declaring a method "static" ? how do you invoke such a method ?
+
+package Assesement2;
+
+import java.util.Scanner;
+
+public class Static {
+    //static variable
+    static int sum=0;
+
+    //static block
+    static {
+        //This block gets executed when the class is loaded in the memory.
+        System.out.println("Static Block:");
+    }
+
+    //static method
+    public static int addition(int a,int b){
+      sum=a+b;
+        return sum;
+    }
+
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number1:");
+        int n1=s.nextInt();
+        System.out.println("enter the number2:");
+        int n2=s.nextInt();
+        //create a static method and call it without ibject
+        addition(n1,n2);
+      System.out.println(sum);
+    }
+}
